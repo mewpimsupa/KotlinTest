@@ -94,17 +94,25 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_toast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Toast"
-        android:layout_marginStart="@dimen/margin_padding_large"
-        app:layout_constraintStart_toEndOf="@+id/layout_text_first"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/layout_text_first" />
 
-    <com.google.android.material.textfield.TextInputLayout
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="button_toast,textView2,layout_text_first"/>
+
+
+     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_text_optional"
         style="@style/optional.TextInPut"
         android:layout_width="0dp"
@@ -171,6 +179,13 @@
             android:text="chip4" />
 
     </com.google.android.material.chip.ChipGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

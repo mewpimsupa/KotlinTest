@@ -21,10 +21,8 @@ class LifeCycleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_life_cycle)
         text_status.text = "OnCreate"
-        toast("Create")
 
-
-        Log.d("logtest","123456")
+        Log.d("logtest","Create")
 
 
         button_next.setOnClickListener {
@@ -43,20 +41,13 @@ class LifeCycleActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        val timer = object : CountDownTimer(1000, 1000) {
-            override fun onFinish() {
-                toast("Resume")
-            }
 
-            override fun onTick(millisUntilFinished: Long) {
-            }
-        }
-        timer.start()
+        Log.d("logtest","Resume")
     }
 
     override fun onPause() {
         super.onPause()
-        toast("Pause")
+        Log.d("logtest","Pause")
     }
 
 
