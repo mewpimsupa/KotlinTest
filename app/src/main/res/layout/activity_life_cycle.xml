@@ -22,8 +22,8 @@
         android:id="@+id/button_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Press to count"
         android:layout_marginTop="@dimen/margin_padding_x_large"
+        android:text="Press to count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_status" />
@@ -32,8 +32,8 @@
         android:id="@+id/button_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="next"
         android:layout_marginTop="@dimen/margin_padding_large"
+        android:text="next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_count" />
@@ -41,9 +41,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_first"
         style="@style/first.Button"
-        android:layout_marginTop="@dimen/margin_padding_x_large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_x_large"
         android:text="Select Vehicle Type"
         app:icon="@drawable/ic_expand_more_black_24dp"
         app:iconGravity="end"
@@ -67,8 +67,8 @@
         style="@style/Text_Normal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vehicle Reg No."
         android:layout_margin="@dimen/margin_padding_large"
+        android:text="Vehicle Reg No."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_optional" />
 
@@ -80,9 +80,9 @@
         android:layout_height="wrap_content"
         app:counterEnabled="true"
         app:counterMaxLength="6"
-        app:layout_constraintWidth_percent="0.5"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintWidth_percent="0.5">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edittext_first"
@@ -109,10 +109,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
-        app:constraint_referenced_ids="button_toast,textView2,layout_text_first"/>
+        app:constraint_referenced_ids="button_toast,textView2,layout_text_first" />
 
 
-     <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_text_optional"
         style="@style/optional.TextInPut"
         android:layout_width="0dp"

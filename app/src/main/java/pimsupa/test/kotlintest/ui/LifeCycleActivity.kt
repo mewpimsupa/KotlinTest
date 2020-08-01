@@ -22,7 +22,7 @@ class LifeCycleActivity : AppCompatActivity() {
         setContentView(R.layout.activity_life_cycle)
         text_status.text = "OnCreate"
 
-        Log.d("logtest","Create")
+        //Log.d("logtest","Create")
 
 
         button_next.setOnClickListener {
