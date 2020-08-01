@@ -1,10 +1,225 @@
 <resources>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="materialAlertDialogTheme">
+            @style/ThemeOverlay.MaterialComponents.MaterialAlertDialog
+        </item>
     </style>
+
+    <style name="first.TextInPut" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+        <item name="boxBackgroundColor">@color/colorBackgroundHighlight</item>
+    </style>
+
+    <style name="optional.TextInPut" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+    </style>
+
+    <style name="disable.TextInPut" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="boxBackgroundColor">@color/grey</item>
+    </style>
+
+    <style name="normal.Edittext" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/soft_black</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+    </style>
+
+    <style name="disable.Edittext" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/extra_dark_grey</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+        <item name="android:enabled">false</item>
+    </style>
+
+
+    <style name="save.Button" parent="Widget.MaterialComponents.Button">
+        <item name="iconTint">@color/white</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="first.Button" parent="Widget.MaterialComponents.Button">
+        <item name="iconTint">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="backgroundTint">@color/colorBackgroundHighlight</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="optional.Button.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconTint">@color/colorPrimary</item>
+        <item name="backgroundTint">@color/colorHighlight</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="text.Button.Outline" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="first.Chip" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_choice_state_color</item>
+        <item name="android:textColor">@color/chip_choice_state_text_color</item>
+        <item name="android:textAppearance">@style/Text_Normal</item>
+    </style>
+
+    <style name="optional.Chip" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="android:textAppearance">@style/Text_Normal</item>
+    </style>
+
+    <style name="materialCard" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">10dp</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
+    <style name="imageClickable">
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:background">@drawable/ripple_effect</item>
+        <item name="android:padding">@dimen/margin_padding_small</item>
+    </style>
+
+    <style name="imageNotClick">
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="iconNotClick">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_width">@dimen/icon_size</item>
+        <item name="android:layout_height">@dimen/icon_size</item>
+    </style>
+
+    <style name="iconClick">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_width">@dimen/icon_size</item>
+        <item name="android:layout_height">@dimen/icon_size</item>
+        <item name="android:background">@drawable/ripple_effect</item>
+        <item name="android:padding">@dimen/margin_padding_default</item>
+    </style>
+
+
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="rippleColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="rippleColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <style name="myAlertDialogText" parent="Widget.MaterialComponents.TextView">
+        <item name="rippleColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/soft_black</item>
+        <item name="android:textSize">@dimen/text_selection_dialog</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Alert.Button.Positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Alert.Button.Neutral</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Alert.Button.Neutral</item>
+    </style>
+
+    <style name="layout_cardview">
+        <item name="android:background">@drawable/background_cardview</item>
+        <item name="android:radius">5dp</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:layout_margin">@dimen/margin_padding_default</item>
+    </style>
+
+    <style name="include_constraintlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin_padding_default</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <style name="Text_Spinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_spinner_size</item>
+        <item name="android:textColor">@color/soft_black</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:background">@color/dark_grey</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="Text_Normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+        <item name="android:textColor">@color/soft_black</item>
+    </style>
+
+    <style name="Text_Detail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_detail_size</item>
+        <item name="android:textColor">@color/soft_black</item>
+    </style>
+
+    <style name="Text_Large">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_big_size</item>
+        <item name="android:textColor">@color/soft_black</item>
+    </style>
+
+    <style name="Text_Normal_bold">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+        <item name="android:textColor">@color/soft_black</item>
+    </style>
+
+    <style name="Text_Topic">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text_Hint">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_normal_size</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="Text_Header">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_header_size</item>
+        <item name="android:textColor">@color/soft_black</item>
+    </style>
+
 
 </resources>

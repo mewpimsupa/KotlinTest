@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#145CB3</color>
-    <color name="colorPrimaryDark">#122159</color>
-    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorPrimary">#315377</color>
+    <color name="colorPrimaryDark">#152D50</color>
+    <color name="colorAccent">#F3A93A</color>
+    <color name="colorSecondary">#F3A93A</color>
+    <color name="colorSecondaryDark">#C57903</color>
+    <color name="colorBackgroundHighlight">#CCE8F5</color>
+    <color name="colorBackgroundSecondHighlight">#F5EBCC</color>
+    <color name="colorHighlight">#F6F8F9</color>
+
+    <!--    dark mode-->
+    <!--    <color name="colorPrimary">#974141</color>-->
+    <!--    <color name="colorPrimaryDark">#FF8C39</color>-->
+    <!--    <color name="colorAccent">#690630</color>-->
+    <!--    <color name="colorSecondary">#F3BE3A</color>3f6184-->
+    <!--    <color name="colorBackgroundHighlight">#582300</color>-->
+    <!--    <color name="colorHighlight">#f6f7f9</color>-->
+
+    <color name="colorTransparentLoading">#80AFAFAF</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_red">#970422</color>
+    <color name="soft_grey">#F1F1F1</color>
+    <color name="grey">#E9E9E9</color>
+    <color name="dark_grey">#C7C7C7</color>
+    <color name="extra_dark_grey">#585858</color>
+    <color name="soft_black">#1F1F1F</color>
 </resources>

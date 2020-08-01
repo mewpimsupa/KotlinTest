@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="margin_padding_x_small">4dp</dimen>
+    <dimen name="margin_padding_small">4dp</dimen>
+    <dimen name="margin_padding_default">8dp</dimen>
+    <dimen name="margin_padding_large">16dp</dimen>
+    <dimen name="margin_padding_x_large">32dp</dimen>
+    <dimen name="margin_padding_xx_large">48dp</dimen>
+    <dimen name="margin_padding_xxx_large">64dp</dimen>
+    <dimen name="margin_padding_xxxx_large">128dp</dimen>
+
+    <!--    <dimen name="text_normal_size">16sp</dimen>-->
+    <!--    <dimen name="text_hint_size">12sp</dimen>-->
+    <!--    <dimen name="text_detail_size">12sp</dimen>-->
+    <!--    <dimen name="text_header_size">20sp</dimen>-->
+    <!--    <dimen name="text_selection_dialog">18sp</dimen>-->
+    <!--    <dimen name="text_layout_text_size">20sp</dimen>-->
+    <!--    <dimen name="text_spinner_size">20sp</dimen>-->
+    <!--    <dimen name="text_button_size">16sp</dimen>-->
+
+    <dimen name="text_normal_size">18sp</dimen>
+    <dimen name="text_hint_size">14sp</dimen>
+    <dimen name="text_detail_size">14sp</dimen>
+    <dimen name="text_big_size">30sp</dimen>
+    <dimen name="text_header_size">22sp</dimen>
+    <dimen name="text_selection_dialog">20sp</dimen>
+    <dimen name="text_layout_text_size">22sp</dimen>
+    <dimen name="text_spinner_size">22sp</dimen>
+    <dimen name="text_button_size">18sp</dimen>
+
+    <dimen name="camera_size">40dp</dimen>
+    <dimen name="show_image_size">80dp</dimen>
+
+    <!--editImage-->
+    <dimen name="edt_image_icon_bar">50dp</dimen>
+    <dimen name="icon_size">45dp</dimen>
+
+    <dimen name="damage_image_w">300dp</dimen>
+
+
+</resources>
