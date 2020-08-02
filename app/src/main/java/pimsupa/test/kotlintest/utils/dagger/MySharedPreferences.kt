@@ -1,8 +1,11 @@
-package pimsupa.test.kotlintest.utils
+package pimsupa.test.kotlintest.utils.dagger
 
 import android.content.SharedPreferences
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class MySharedPreferences (private val mSharedPreferences: SharedPreferences) {
+@Singleton
+class MySharedPreferences @Inject constructor(@AppModule.PrimaryPref private val mSharedPreferences: SharedPreferences) {
 
     fun putData(key: String, data: String) {
         mSharedPreferences.edit().putString(key, data).apply()
