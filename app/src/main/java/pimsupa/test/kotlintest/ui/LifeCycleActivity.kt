@@ -25,7 +25,7 @@ class LifeCycleActivity : AppCompatActivity() {
         Log.d("logtest","Create")
 
         button_next.setOnClickListener {
-            startActivity(Intent(this, CallServiceActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
         }
 
         button_count.setOnClickListener {
