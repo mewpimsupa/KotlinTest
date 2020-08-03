@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_life_cycle.*
 import pimsupa.test.kotlintest.R
@@ -24,6 +25,7 @@ class LifeCycleActivity : AppCompatActivity() {
 
         Log.d("logtest","Create")
 
+
         button_next.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
@@ -40,7 +42,6 @@ class LifeCycleActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-
         Log.d("logtest","Resume")
     }
 

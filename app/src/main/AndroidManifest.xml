@@ -3,6 +3,7 @@
     package="pimsupa.test.kotlintest">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".utils.dagger.MainApplication"
         android:allowBackup="true"
@@ -11,17 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.CallServiceActivity"></activity>
+        <activity android:name=".ui.mvvm.MvvmActivity">
+        </activity>
         <activity android:name=".ui.DaggerActivity" />
-        <activity android:name=".ui.SharedPreferenceActivity" />
-        <activity android:name=".ui.LifeCycleActivity">
+        <activity android:name=".ui.SharedPreferenceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.LifeCycleActivity">
+        </activity>
+        <activity android:name=".ui.LoginActivity">
+
+        </activity>
     </application>
 
 </manifest>

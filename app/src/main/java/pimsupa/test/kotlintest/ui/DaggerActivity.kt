@@ -8,6 +8,7 @@ import pimsupa.test.kotlintest.utils.dagger.MainApplication
 import pimsupa.test.kotlintest.utils.dagger.MySharedPreferences
 import javax.inject.Inject
 
+/**ใช้ dagger ไม่ต้องกำหนดค่าใหม่ แค่ใช้ inject*/
 class DaggerActivity : AppCompatActivity() {
 
     @Inject
