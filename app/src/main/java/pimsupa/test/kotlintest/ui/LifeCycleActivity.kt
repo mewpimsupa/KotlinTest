@@ -27,7 +27,7 @@ class LifeCycleActivity : AppCompatActivity() {
 
 
         button_next.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, SharedPreferenceActivity::class.java))
         }
 
         button_count.setOnClickListener {
