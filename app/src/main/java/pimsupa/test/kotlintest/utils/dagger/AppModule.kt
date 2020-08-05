@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import dagger.Module
 import dagger.Provides
+import pimsupa.test.kotlintest.utils.CallWebService
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
@@ -45,10 +46,10 @@ class AppModule(private val application: Application) {
 //        return mFirebaseRemoteConfig
 //    }
 
-//    @Singleton
-//    @Provides
-//    fun webService(remote: FirebaseRemoteConfig, sharedPred: MySharedPreferences) =
-//        CallWebService(remote, sharedPred)
+    @Singleton
+    @Provides
+    fun webService(sharedPred: MySharedPreferences) =
+        CallWebService(sharedPred)
 
 
 //    @Singleton

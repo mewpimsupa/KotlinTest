@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.View
 import android.widget.Toast
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import org.ksoap2.serialization.SoapObject
 import pimsupa.test.kotlintest.R
 
 fun Activity.toast(text:String){
@@ -28,15 +29,15 @@ fun String.checkEmptyAnytype(): String {
     }
 }
 
-//fun SoapObject.getValueFromQuery(field: String): String {
-//    var value = ""
-//    val sfield = "; $field="
-//    val bfield = "{$field="
-//    if (this.toString().contains(sfield) || this.toString().contains(bfield)) {
-//        value = this.getProperty(field).toString().trim().checkEmptyAnytype()
-//    }
-//    return value
-//}
+fun SoapObject.getValueFromQuery(field: String): String {
+    var value = ""
+    val sfield = "; $field="
+    val bfield = "{$field="
+    if (this.toString().contains(sfield) || this.toString().contains(bfield)) {
+        value = this.getProperty(field).toString().trim().checkEmptyAnytype()
+    }
+    return value
+}
 
 
 fun Context.showAlertDialog(

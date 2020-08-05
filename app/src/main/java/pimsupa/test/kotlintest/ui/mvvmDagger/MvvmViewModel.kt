@@ -1,4 +1,4 @@
-package pimsupa.test.kotlintest.ui.mvvm
+package pimsupa.test.kotlintest.ui.mvvmDagger
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

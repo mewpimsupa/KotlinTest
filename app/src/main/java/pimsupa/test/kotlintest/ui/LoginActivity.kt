@@ -12,6 +12,7 @@ import pimsupa.sss.surveyin.utils.Utils
 import pimsupa.test.kotlintest.R
 import pimsupa.test.kotlintest.model.LoginModel
 import pimsupa.test.kotlintest.utils.CallWebService
+import pimsupa.test.kotlintest.utils.CallWebServiceTest
 import pimsupa.test.kotlintest.utils.showVisibility
 
 class LoginActivity : AppCompatActivity() {
@@ -39,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
             val sql = "select * from UserAccount " +
                     "where UserID = '$username' and Password = '$password' "
             Log.i("logtest",sql)
-            return CallWebService().callApi(Utils.METHOD_GET_DATA, sql)
+            return CallWebServiceTest().callApi(Utils.METHOD_GET_DATA, sql)
         }
 
         override fun onPostExecute(result: SoapObject?) {

@@ -1,6 +1,5 @@
-package pimsupa.test.kotlintest.ui.mvvm
+package pimsupa.test.kotlintest.ui.mvvmDagger
 
-import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -10,21 +9,21 @@ import kotlinx.android.synthetic.main.activity_mvvm.*
 import pimsupa.test.kotlintest.R
 import pimsupa.test.kotlintest.respository.LoginRespository
 import pimsupa.test.kotlintest.utils.CallWebService
-import pimsupa.test.kotlintest.utils.dagger.MySharedPreferences
+import pimsupa.test.kotlintest.utils.dagger.MainApplication
+import javax.inject.Inject
 
-class MvvmActivity : AppCompatActivity() {
+class MvvmDaggerActivity : AppCompatActivity() {
 
-    private lateinit var factory: MvvmViewmodelFactory
+    @Inject
+    lateinit var factory: MvvmViewmodelFactory
 
     private val viewmodel: MvvmViewModel by viewModels { factory }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mvvm)
-        factory = MvvmViewmodelFactory(LoginRespository(CallWebService(
-            MySharedPreferences(application.getSharedPreferences("myPrefs", Context.MODE_PRIVATE))
-        )))
 
+        MainApplication.appComponent.injectMvvmDagger(this)
 
         viewmodel.toast.observe(this, Observer { e ->
             e.getContentIfNotHandled()?.let {

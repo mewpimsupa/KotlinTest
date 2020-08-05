@@ -9,24 +9,24 @@ import pimsupa.sss.surveyin.utils.Utils.METHOD_GET_DATA
 import pimsupa.test.kotlintest.utils.dagger.MySharedPreferences
 import javax.inject.Inject
 
-class CallWebService @Inject constructor(private val sharedPreferences: MySharedPreferences) {
+class CallWebServiceTest () {
 
     private var NewDataSet: SoapObject? = null
     private var Return: SoapObject? = null
 
 
-    private fun getUserType(): String {
-        return sharedPreferences.getData("UserType")
-    }
-
-    private fun getWebservice() {
-        val type = when (getUserType()) {
-            Utils.TESTER -> "web_service_test"
-            else -> "web_service_r"
-        }
-////        val type = "web_service_test"
-//        return mFirebaseRemoteConfig.getString(type)
-    }
+//    private fun getUserType(): String {
+//        return sharedPreferences.getData("UserType")
+//    }
+//
+//    private fun getWebservice() {
+//        val type = when (getUserType()) {
+//            Utils.TESTER -> "web_service_test"
+//            else -> "web_service_r"
+//        }
+//////        val type = "web_service_test"
+////        return mFirebaseRemoteConfig.getString(type)
+//    }
 
     fun callApi(methodName: String, sql: String?): SoapObject? {
 //        val SOAP_URL = getWebservice()

@@ -13,19 +13,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.mvvm.MvvmActivity">
-        </activity>
-        <activity android:name=".ui.DaggerActivity" />
-        <activity android:name=".ui.SharedPreferenceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.DaggerActivity" />
+        <activity android:name=".ui.SharedPreferenceActivity">
+
+        </activity>
         <activity android:name=".ui.LifeCycleActivity">
         </activity>
-        <activity android:name=".ui.LoginActivity">
+        <activity android:name=".ui.mvvmDagger.MvvmDaggerActivity">
 
+        </activity>
+        <activity android:name=".ui.LoginActivity">
         </activity>
     </application>
 
