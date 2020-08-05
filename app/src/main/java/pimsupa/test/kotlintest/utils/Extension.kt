@@ -38,6 +38,19 @@ fun SoapObject.getValueFromQuery(field: String): String {
     }
     return value
 }
+fun SoapObject.oneResult(): SoapObject {
+    return this.getProperty("SELECT") as SoapObject
+}
+
+fun SoapObject.manyResult(): MutableList<SoapObject> {
+    val list = mutableListOf<SoapObject>()
+    for (i in 0 until this.propertyCount) {
+        val SELECT = this.getProperty(i) as SoapObject
+        list.add(SELECT)
+    }
+    return list
+}
+
 
 
 fun Context.showAlertDialog(
