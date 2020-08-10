@@ -1,5 +1,6 @@
 package pimsupa.test.kotlintest.ui
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.AsyncTask
@@ -12,13 +13,21 @@ import pimsupa.sss.surveyin.utils.Utils
 import pimsupa.test.kotlintest.R
 import pimsupa.test.kotlintest.model.LoginModel
 import pimsupa.test.kotlintest.utils.*
+import pimsupa.test.kotlintest.utils.dagger.MySharedPreferences
 
 class LoginActivity : AppCompatActivity() {
 
-
+private lateinit var sharePref : SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        sharePref =  application.getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
+
+        if(sharePref.getSharedPref<LoginModel>()!= null){
+            val userID = sharePref.getSharedPref<LoginModel>()!!.userID
+            toast(userID)
+        }
 
         button_login.setOnClickListener {
             val username = edittext_username.text.toString()
@@ -50,9 +59,15 @@ class LoginActivity : AppCompatActivity() {
                 val select = result.oneResult()
                 val username = select.getValueFromQuery("UserID")
                 Log.i("logtest","$username login!")
+
+                val item = LoginModel(username,"1")
+
+                sharePref.saveSharedPref(item)
             }
             else{
                 Log.i("logtest","invalid username or password")
+
+                sharePref.edit().clear().apply()
             }
             loading_layout.showVisibility(false)
         }

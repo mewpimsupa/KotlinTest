@@ -2,14 +2,25 @@ package pimsupa.test.kotlintest.utils
 
 import android.app.Activity
 import android.content.Context
+import android.content.SharedPreferences
 import android.view.View
 import android.widget.Toast
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.gson.Gson
 import org.ksoap2.serialization.SoapObject
 import pimsupa.test.kotlintest.R
 
 fun Activity.toast(text:String){
     Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+}
+
+fun <T> SharedPreferences.saveSharedPref(item:T){
+    val json = Gson().toJson(item)
+    this.edit().putString("Model", json).apply()
+}
+inline fun <reified T> SharedPreferences.getSharedPref():T?{
+    val json = this.getString("Model", null)
+    return Gson().fromJson(json, T::class.java)
 }
 
 fun View.showVisibility(isShow:Boolean){

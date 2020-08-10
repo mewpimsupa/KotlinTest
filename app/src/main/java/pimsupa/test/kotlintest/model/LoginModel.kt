@@ -1,3 +1,10 @@
 package pimsupa.test.kotlintest.model
 
-data class LoginModel(var username:String,var password:String)
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+data class LoginModel(
+    var userID:String,
+    var yard:String)
+    :Parcelable
