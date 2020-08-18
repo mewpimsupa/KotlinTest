@@ -4,7 +4,7 @@ import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
-import pimsupa.sss.surveyin.utils.Utils
+import pimsupa.test.kotlintest.utils.Utils
 import pimsupa.test.kotlintest.utils.CallWebService
 import javax.inject.Inject
 

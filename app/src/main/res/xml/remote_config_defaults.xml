@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+
+    <entry>
+        <key>web_service</key>
+        <value>GramServices</value>
+    </entry>
+
+    <entry>
+        <key>web_service_test</key>
+        <value>GramServices</value>
+    </entry>
+
+</defaultsMap>

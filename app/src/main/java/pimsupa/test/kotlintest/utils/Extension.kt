@@ -3,8 +3,11 @@ package pimsupa.test.kotlintest.utils
 import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
+import android.content.pm.PackageManager
 import android.view.View
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.gson.Gson
 import org.ksoap2.serialization.SoapObject
@@ -31,6 +34,20 @@ fun View.showVisibility(isShow:Boolean){
     }
 }
 
+
+fun Activity.requestPermission(permission: String, code: Int): Boolean {
+    val isGranted = ContextCompat.checkSelfPermission(
+        this,
+        permission
+    ) == PackageManager.PERMISSION_GRANTED
+    if (!isGranted) {
+        ActivityCompat.requestPermissions(
+            this, arrayOf(permission),
+            code
+        )
+    }
+    return isGranted
+}
 
 fun String.checkEmptyAnytype(): String {
     return if (this != "anyType{}") {

@@ -4,8 +4,7 @@ import org.ksoap2.SoapEnvelope
 import org.ksoap2.serialization.SoapObject
 import org.ksoap2.serialization.SoapSerializationEnvelope
 import org.ksoap2.transport.HttpTransportSE
-import pimsupa.sss.surveyin.utils.Utils
-import pimsupa.sss.surveyin.utils.Utils.METHOD_GET_DATA
+import pimsupa.test.kotlintest.utils.Utils.METHOD_GET_DATA
 import pimsupa.test.kotlintest.utils.dagger.MySharedPreferences
 import javax.inject.Inject
 
