@@ -8,7 +8,7 @@ import pimsupa.test.kotlintest.utils.Utils
 import pimsupa.test.kotlintest.utils.CallWebService
 import javax.inject.Inject
 
-class LoginRespository @Inject constructor(val webService: CallWebService) {
+class LoginRespository (val webService: CallWebService) {
 
     suspend fun testDatabase():String = withContext(Dispatchers.IO){
         //call database

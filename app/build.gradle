@@ -76,4 +76,9 @@ dependencies {
     //OCR
     implementation 'com.google.android.gms:play-services-vision:20.1.0'
     implementation 'com.google.android.gms:play-services-mlkit-text-recognition:16.1.0'
+
+    //Koin
+    implementation 'org.koin:koin-android:2.1.5'
+    implementation 'org.koin:koin-androidx-scope:2.1.5'
+    implementation 'org.koin:koin-androidx-viewmodel:2.1.5'
 }

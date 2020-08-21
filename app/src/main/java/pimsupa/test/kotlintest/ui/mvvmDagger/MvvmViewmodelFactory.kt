@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 
 @Suppress("UNCHECKED_CAST")
-class MvvmViewmodelFactory @Inject constructor(
+class MvvmViewmodelFactory (
     private val respository: LoginRespository
 ) :
     ViewModelProvider.NewInstanceFactory() {

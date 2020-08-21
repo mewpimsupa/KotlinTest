@@ -6,6 +6,10 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import kotlinx.android.synthetic.main.activity_mvvm.*
+import org.koin.android.ext.android.inject
+import org.koin.androidx.scope.currentScope
+import org.koin.core.parameter.parametersOf
+import org.koin.java.KoinJavaComponent.inject
 import pimsupa.test.kotlintest.R
 import pimsupa.test.kotlintest.respository.LoginRespository
 import pimsupa.test.kotlintest.utils.CallWebService
@@ -14,16 +18,12 @@ import javax.inject.Inject
 
 class MvvmDaggerActivity : AppCompatActivity() {
 
-    @Inject
-    lateinit var factory: MvvmViewmodelFactory
-
+    private val factory: MvvmViewmodelFactory  by inject()
     private val viewmodel: MvvmViewModel by viewModels { factory }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mvvm)
-
-        MainApplication.appComponent.injectMvvmDagger(this)
 
         viewmodel.toast.observe(this, Observer { e ->
             e.getContentIfNotHandled()?.let {

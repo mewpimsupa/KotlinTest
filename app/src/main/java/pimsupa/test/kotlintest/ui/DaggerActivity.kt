@@ -20,7 +20,7 @@ class DaggerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dagger)
 
-        MainApplication.appComponent.injectDagger(this)
+//        MainApplication.appComponent.injectDagger(this)
 
         button_count.setOnClickListener {
             count += 1

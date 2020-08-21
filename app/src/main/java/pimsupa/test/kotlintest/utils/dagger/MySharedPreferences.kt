@@ -4,8 +4,7 @@ import android.content.SharedPreferences
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
-class MySharedPreferences @Inject constructor(@AppModule.PrimaryPref private val mSharedPreferences: SharedPreferences) {
+class MySharedPreferences (private val mSharedPreferences: SharedPreferences) {
 
     fun putData(key: String, data: String) {
         mSharedPreferences.edit().putString(key, data).apply()

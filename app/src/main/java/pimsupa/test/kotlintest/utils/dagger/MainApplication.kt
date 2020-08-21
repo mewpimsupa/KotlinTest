@@ -1,13 +1,16 @@
 package pimsupa.test.kotlintest.utils.dagger
 
 import android.app.Application
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 import pimsupa.test.kotlintest.BuildConfig
+import pimsupa.test.kotlintest.utils.Koin.module
 
 
 class MainApplication : Application() {
 
     companion object {
-        lateinit var appComponent: AppComponent
+//        lateinit var appComponent: AppComponent
         lateinit var instance: MainApplication
             private set
     }
@@ -15,9 +18,14 @@ class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         instance = this
-        appComponent = DaggerAppComponent.builder()
-            .appModule(AppModule(this))
-            .build()
+//        appComponent = DaggerAppComponent.builder()
+//            .appModule(AppModule(this))
+//            .build()
+
+        startKoin {
+            androidContext(this@MainApplication)
+            modules(module)
+        }
 
 
 //        // แสดง Log เฉพาะ Debug Mode
